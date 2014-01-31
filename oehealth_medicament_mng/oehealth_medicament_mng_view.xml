@@ -8,9 +8,15 @@
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <tree string="Medicament">
+                    <field name="product_name" />
                     <field name="name" />
-                    <field name="product_presentation"/>
                     <field name="active_component_name"/>
+                    <field name="concentration"/>
+                    <field name="presentation"/>
+                    <field name="pres2"/>
+                    <field name="pres3"/>
+                    <field name="therap_class"/>
+                    <field name="product_presentation"/>
                     <field name="manufacturer_name"/>
                     <field name="cod_prod" default_focus="1"/>
                     <field name="cod_abcfarma" default_focus="1"/>
@@ -51,9 +57,15 @@
                         <group>
 	                        <!--group string="Personal Data"-->
 	                        <group>
-                                <field name="name" default_focus="1"/>
-                                <field name="product_presentation"/>
+                                <field name="product_name" default_focus="1"/>
+                                <field name="name"/>
                                 <field name="active_component_name"/>
+                                <field name="concentration"/>
+                                <field name="presentation"/>
+                                <field name="pres2"/>
+                                <field name="pres3"/>
+                                <field name="therap_class"/>
+                                <field name="product_presentation"/>
                                 <field name="manufacturer_name"/>
                             </group>
                             <group>
@@ -70,6 +82,8 @@
                             <page string="Medicament" groups="oehealth_base.group_oehealth_manager">
                                 <group>
                                     <field name="medicament" />
+                                    <field name="therapeutic_class" />
+                                    <field name="manufacturer" />
                                 </group>
                             </page>
                             <page string="Settings" groups="oehealth_base.group_oehealth_manager">
