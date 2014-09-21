@@ -19,6 +19,8 @@
                     <field name="insurance_id" />
                     <field name="insured_type" />
                     <field name="insured_card_status" />
+                    <field name="insured_status" />
+                    <field name="patient_status" />
 	                <field name="tag_ids" />
                     <field name="state" />
                 </tree>
@@ -173,6 +175,7 @@
                                     <field name="insured_group_id" />
                                     <field name="insured_group_member_id" />
                                     <field name="group_role_id" />
+                                    <field name="group_kinship_id" />
                                 </group>
                             </page>
                             <page string="Settings" groups="oehealth_base.group_oehealth_manager">
@@ -204,9 +207,9 @@
                         <filter string="Stage" domain="[]" context="{'group_by': 'state'}"/>
                         <filter string="Insurance" domain="[]" context="{'group_by': 'insurance_id'}"/>
                         <filter string="Insured Type" domain="[]" context="{'group_by': 'insured_type'}"/>
-                        <!--filter string="Insured Card Status" domain="[]" context="{'group_by':'insured_card_status'}" /-->
-                        <!--filter string="Insured Status" domain="[]" context="{'group_by':'insured_status'}" /-->
-                        <!--filter string="Patient Status" domain="[]" context="{'group_by':'patient_status'}" /-->
+                        <filter string="Insured Card Status" domain="[]" context="{'group_by':'insured_card_status'}" />
+                        <filter string="Insured Status" domain="[]" context="{'group_by':'insured_status'}" />
+                        <filter string="Patient Status" domain="[]" context="{'group_by':'patient_status'}" />
                     </group>
                 </search>
             </field>
